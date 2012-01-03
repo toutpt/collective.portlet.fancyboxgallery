@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.portlet.gallery">
+
+  <browser:resourceDirectory
+    name="collective.portlet.gallery"
+    directory="resources"
+    />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.portlet.gallery"
+      directory="profiles/default"
+      description='Extension profile for collective.portlet.gallery.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>
