@@ -1,6 +1,0 @@
-<layers>
-<!-- uncomment to activate
-    <layer name="collective.portlet.gallery"
-           interface="collective.portlet.gallery.interfaces.ILayer" />
--->
-</layers>

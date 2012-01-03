@@ -2,12 +2,8 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.portlet.gallery">
-
-  <browser:resourceDirectory
-    name="collective.portlet.gallery"
-    directory="resources"
-    />
 
   <genericsetup:registerProfile
       name="default"
@@ -15,6 +11,22 @@
       directory="profiles/default"
       description='Extension profile for collective.portlet.gallery.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <permission
+    id="collective.portlet.gallery.AddGalleryPortlet"
+    title="collective.portlet.gallery: Add gallery portlet"
+    />
+
+  <plone:portlet
+      name="collective.portlet.gallery.Gallery"
+      interface=".portlet.IGalleryPortlet"
+      assignment=".portlet.Assignment"
+      view_permission="zope2.View"
+      edit_permission="collective.portlet.gallery.AddGalleryPortlet"
+      renderer=".portlet.Renderer"
+      addview=".portlet.AddForm"
+      editview=".portlet.EditForm"
       />
 
 </configure>
