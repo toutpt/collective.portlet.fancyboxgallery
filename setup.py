@@ -24,6 +24,7 @@ setup(name='collective.portlet.fancyboxgallery',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.gallery',
           'collective.js.fancybox',
           # -*- Extra requirements: -*-
       ],
