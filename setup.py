@@ -3,7 +3,7 @@ import os
 
 version = '1.0'
 
-setup(name='collective.portlet.gallery',
+setup(name='collective.portlet.fancyboxgallery',
       version=version,
       description="Gallery portlet for Plone",
       long_description=open("README.rst").read() + "\n" +
@@ -13,10 +13,10 @@ setup(name='collective.portlet.gallery',
       classifiers=[
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      keywords='plone gallery fancybox',
+      author='JeanMichel FRANCOIS aka toutpt',
+      author_email='toutpt@gmail.com',
+      url='https://github.com/collective/collective.portlet.fancyboxgallery',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.portlet'],
@@ -24,6 +24,7 @@ setup(name='collective.portlet.gallery',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.js.fancybox',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

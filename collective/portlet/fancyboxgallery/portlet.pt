@@ -1,6 +1,6 @@
 <div tal:condition="view/data/omit_border"
      tal:attributes="class string:portletGallery ${view/css_class}"
-     tal:content="structure view/gallery" />
+     tal:content="structure view/render_gallery" />
 <dl tal:condition="not:view/data/omit_border"
     tal:attributes="class string:portlet portletGallery ${view/css_class}"
     i18n:domain="plone">
@@ -18,7 +18,7 @@
     </dt>
 
     <dd class="portletItem odd">
-        <div tal:replace="structure view/gallery" />
+        <div tal:replace="structure view/render_gallery" />
         <tal:corners condition="not:view/has_footer">
             <span class="portletBottomLeft"></span>
             <span class="portletBottomRight"></span>

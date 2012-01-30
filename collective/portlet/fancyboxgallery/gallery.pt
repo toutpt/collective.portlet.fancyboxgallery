@@ -1,0 +1,25 @@
+<tal:block define="galleryview view/gallery_view"><tal:check tal:condition="galleryview">
+     <div class="fancyboxgallery" tal:define="cover python:galleryview.get_photo()">
+       <img id="fancyboxgallery" tal:attributes="src cover/url; alt cover/description" style="max-width:100%;"/>
+       <ul id="fancyboxgallery-photos">
+         <li tal:repeat="photo galleryview/photos">
+           <a class="fancyboxgallery-link" rel="group" 
+            tal:attributes="title string:${photo/title}-${photo/description};
+                       href photo/url;">
+           <img tal:attributes="src photo/thumb_url; alt photo/description" />
+           </a>
+         </li>
+       </ul>
+     </div>
+     <script type="text/javascript">
+(function($){
+    $(document).ready(function() {
+        $('#fancyboxgallery-photos').toggle();
+        $('a.fancyboxgallery-link').fancybox(fancyboxgallery);
+        $('#fancyboxgallery').click(function(){
+          $('a.fancyboxgallery-link').first().trigger('click');
+        });
+    });
+})(jQuery);
+    </script>
+</tal:check></tal:block>
