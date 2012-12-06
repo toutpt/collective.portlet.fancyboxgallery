@@ -11,12 +11,15 @@ setup(name='collective.portlet.fancyboxgallery',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
         "Programming Language :: Python",
         ],
       keywords='plone gallery fancybox',
       author='JeanMichel FRANCOIS aka toutpt',
       author_email='toutpt@gmail.com',
-      url='https://github.com/collective/collective.portlet.fancyboxgallery',
+      url='https://github.com/toutpt/collective.portlet.fancyboxgallery',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.portlet'],
